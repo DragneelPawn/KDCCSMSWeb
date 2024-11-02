@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-color: #686868;
+    --formcontainer-color: #282828;
+    --formcontainershadow-color: #161616;
+    --textbox-color: #585B58;
+    --textboxfont-color: #939393;
+    --fonthighlight-color: #FFFFFF;
+    --textboxhighlight-color: #2EC321;
+    --link-color: #296ACC;
+    --gradients-color: linear-gradient(to top right, #A2CA71, #0C350A);
+}
+html, body{
+    background-color: var(--body-color);
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+}
+.formcontainer{
+    display: flex;
+    background-color: var(--formcontainer-color);
+    max-width: 870.36px;
+    height: 493.49px;
+    width: auto;
+    color: var(--fonthighlight-color);
+    margin: 55px auto;
+    justify-content: space-between;
+    border-radius: 14.22px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.photocontainer{
+    background-image: var(--gradients-color);
+    margin: 10px 30px 10px 10px;
+    max-width: 426.65px;
+    border-radius: 7.11px;
+    padding: 60px;
+}
+
+.slider {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    opacity: 0;
+}
+
+.fade {
+    opacity: 1;
+}
+.slide fade h3{
+    font-family: "Inter", sans-serif;
+    font-weight: lighter;
+}
+img {
+    width: 315.72px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+/* Custom styles for Flatpickr navigation arrows */
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.filloutcontainer{
+    justify-content: center;
+    align-items: center;
+    margin: 30px 30px 0 20px;
+    transition: opacity 0.5s ease-out;
+}
+h1{
+    font-weight: 300;
+    font-size: 34.13px;
+    margin-bottom: 15px;
+}
+p{
+    font-size: 10.67px;
+    margin-bottom: 15px;
+    margin-left: -45%;
+}
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+    height: 29.15px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3.56px;
+    font-size: 11.38px;
+    background-color: var(--textbox-color);
+    border: none;
+    color: var(--fonthighlight-color);
+    transition: border 0.6s ease, box-shadow 0.6s ease;
+}
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="file"]::placeholder,
+select::placeholder {
+    color: var(--textboxfont-color);
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus,
+select:focus {
+    outline: none;
+    border: var(--textboxhighlight-color) solid 1px;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+}
+
+#genderselect{
+    width: 80px;
+}
+#kasiglahanselect{
+    width: 37%;
+    margin-right: 20px;
+}
+#agenumber{
+    max-width: 46.22px;
+}
+#birthdate{
+    max-width: 80px;
+}
+#address{
+    width: 90%;
+}
+#parentname{
+    width: 90%;
+}
+#contactnumber{
+    width: 50%;
+}
+#middlename{
+    max-width: 83px;
+}
+a{
+    color: var(--link-color);
+}
+a:hover{
+    color: var(--textboxhighlight-color);
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.checkbox p, a{
+    margin: 5px;
+}
+input[type="button"]{
+    width: 91%;
+    height: 29.15px;
+    color: var(--fonthighlight-color);
+    background-image: var(--gradients-color);
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.horizontalline{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--textboxfont-color);
+    max-width: 91.5%;
+}
+.horizontalline hr{
+    width: 130px;
+    height: 2px;
+    border-color: var(--textboxfont-color);
+}
+.horizontalline h6{
+    margin: 3px;
+}
+.contactourdevelopers{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-width: 91.5%;
+}
+input[type="submit"]{
+    width: 91%;
+    height: 29.15px;
+    color: var(--fonthighlight-color);
+    background-image: var(--gradients-color);
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.submitdocuments{
+    display: block;
+    margin: 50px 30px 0 20px;
+    transition: opacity 0.5s ease-in;
+}
+form #iimmunization{
+    margin-bottom: 30px;
+}
+.checklogocontainer{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%;
+    margin: 125px auto;
+    display: none;
+}
+.checklogocontainer img{
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.checklogocontainer h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.checklogocontainer p{
+    font-size: 16px;
+    font-weight: lighter;
+    margin-left: 5%;
+}
+.checklogocontainer h2, p{
+    text-align: center;
+}

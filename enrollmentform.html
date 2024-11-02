@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Form</title>
+    <link rel="stylesheet" href="enrollment.css">
+    
+</head>
+<body>
+    <div class="formcontainer">
+        <div class="photocontainer" id="photocontainer">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide fade">
+                        <img src="images/undraw_family_vg76 1.svg" alt="Family">
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/Family2.svg" alt="Children Playing1">
+                        <h3  align="center">Begin to acknowledge the children and improve their capabilities.</h3>
+                    </div>
+                    <div class="slide fade">
+                        <img src="images/Family3.svg" alt="Children Playing2">
+                        <h3 align="center">Adapt to our current technology but do not leave the traditional way of energizing.</h3>
+                    </div>
+                </div>
+                <a class="prev" onclick="changeSlide(-1)"></a>
+                <a class="next" onclick="changeSlide(1)"></a>
+            </div>
+
+        </div>
+            <form action="enrollment.js" id="filloutcontainer">
+                <div class="filloutcontainer" id="firstformcontainer">
+                <h1>Enroll Now</h1>
+                <p>Already have an account? <a href="#">Download</a></p>
+                <input type="text" placeholder="First Name" autocomplete="given-name" id="firstname" required>
+                <input type="text" placeholder="Last Name" autocomplete="family-name" id="lastname" required>
+                <input type="text" placeholder="Middle Name" autocomplete="middle-name" id="middlename" required>
+                <select id="genderselect" name="gender" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="number" placeholder="Age" id="agenumber" required>
+                <input type="text" id="birthdate" placeholder="Birthdate" required>
+                 <input type="text" placeholder="Address" id="address" required autocomplete="street-address">
+                 <input type="text" placeholder="Name of parent" id="parentname" required>
+                 <input type="number" placeholder="Contact Number" id="contactnumber" required>
+                 <select id="kasiglahanselect" name="kasiglahan" required>
+                    <option value="Kasiglahan I" selected>Kasiglahan I</option>
+                    <option value="Kasiglahan II">Kasiglahan II</option>
+                    <option value="Kasiglahan III">Kasiglahan III</option>
+                    <option value="Kasiglahan IV">Kasiglahan IV</option>
+                </select>
+                <div class="checkbox" >
+                <input type="checkbox" id="checkboxT&C"><p>I agree to <a href="#">Terms and Conditions</a></p>
+                </div>
+                <input type="button" id="nextbutton" value="Next">
+                <div class="horizontalline">
+                <hr><h6>or</h6><hr>
+                </div>
+                <div class="contactourdevelopers">
+                <p>Contact our developers <a href="#">Here</a></p>
+                </div>
+            </div>
+                <div class="submitdocuments" id="secondformcontainer" style="display: none;">
+                    <h1>Submit Documents</h1>
+                    <label for="onespic">Student Photo (1x1)</label>
+                    <input type="file" name="onespic" id="onespic" required><br>
+                    <label for="oneppic">Parent Photo (1x1)</label>
+                    <input type="file" name="oneppic" id="oneppic" required><br>
+                    <label for="bcertificate">Birth Certificate</label><br>
+                    <input type="file" name="bcertificate" id="bcertificate" required><br>
+                    <label for="iimmunization">Immunization Record</label>
+                    <input type="file" name="iimmunization" id="iimmunization" required><br>
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="button" value="Back" id="backbutton">
+                </div>
+            </form>
+            <div class="succesful">
+                <div class="checklogocontainer" id="successful">
+                    <img src="images/checklogo.svg" alt="Success!" width="70px" height="70px">
+                    <h2>Submitted!</h2>
+                    <p>Note: Please wait for the confirmation and announcement for your enrollment through your provided contact number, thank you.</p>
+                </div>
+            </div>
+                <script src="enrollment.js" type="module"></script>
+    </div>
+</body>
+</html>
