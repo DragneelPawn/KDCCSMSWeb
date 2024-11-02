@@ -246,7 +246,7 @@ button{
     color: var(--headbackground-color);
     padding: 100px 140px 140px;
     margin-top: 70px;
-    width: 100vw;
+    width: 100%;
 }
 .fourthbodycontent h2{
     width: 336px;
